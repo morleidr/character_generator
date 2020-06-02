@@ -43,9 +43,13 @@ if gender == 'Male':
         elif human_race == 'Celtic':
 
             # Celtic M names shall be one of:
-            # 1. x son of x(father)
+            # 1. x son of x(father) Patronymic
+            # 2. x ap/ab x(father)
             # 2. x of x(place)
             # 3. x the x(noun)
+            # https://en.wikipedia.org/wiki/Patronymic_surname
+
+            m_CelticConnector = ['son of','ap','ab','of','the']
             
             print('Human', gender,">", human_race)
             print('Celtic M Name')
