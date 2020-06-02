@@ -137,8 +137,14 @@ if gender == 'Male':
                   FrenchSurnames[random.randint(1,len(FrenchSurnames))-1])
             
         elif human_race == 'German':
+            
+            # German M names shall be based on:
+            # Given name + middle name + surname (taken from Top 100)
+            
             print('Human', gender,">", human_race)
-            print('German M Name')
+            print(m_GermanNames[random.randint(1,len(m_GermanNames))-1],
+                  m_GermanNames[random.randint(1,len(m_GermanNames))-1],
+                  GermanSurnames[random.randint(1,len(GermanSurnames))-1])
             
         elif human_race == 'Greek':
             print('Human', gender,">", human_race)
