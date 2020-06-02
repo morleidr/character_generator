@@ -33,15 +33,20 @@ if gender == 'Male':
 
         #   Name Based on Human Race
         if human_race == 'Arabic':
+            
             print('Human', gender,">", human_race)
+            
             # Arabic Names based on:
             # Given name + Father name + Grandfather name
+            
             print(m_ArabicNames[random.randint(1,len(m_ArabicNames))-1],
                   m_ArabicNames[random.randint(1,len(m_ArabicNames))-1],
                   m_ArabicNames[random.randint(1,len(m_ArabicNames))-1])
             
         elif human_race == 'Celtic':
-
+            
+            print('Human', gender,">", human_race)
+            
             # Celtic M names shall be one of:
             # 1. x son of x(father) Patronymic
             # 2. x ap/ab x(father)
@@ -49,10 +54,28 @@ if gender == 'Male':
             # 3. x the x(noun)
             # https://en.wikipedia.org/wiki/Patronymic_surname
 
-            m_CelticConnector = ['son of','ap','ab','of','the']
+            # Determine connector
+            m_CelticConnectors = ['son of','ap','ab','of','the']            
+            m_CelticConnector = m_CelticConnectors[random.randint(1,len(m_CelticConnectors))-1] 
+            print(m_CelticConnector)
             
-            print('Human', gender,">", human_race)
-            print('Celtic M Name')
+            # Determine Name from connector
+            if m_CelticConnector == 'the':
+                
+                print(m_CelticNames[random.randint(1,len(m_CelticNames))-1],m_CelticConnector,
+                      Nouns[random.randint(1,len(Nouns))-1])      
+                
+            elif m_CelticConnector == 'of':
+                
+                print(m_CelticNames[random.randint(1,len(m_CelticNames))-1],m_CelticConnector,
+                      Places[random.randint(1,len(Places))-1])
+                
+            else:
+                
+                print(m_CelticNames[random.randint(1,len(m_CelticNames))-1],m_CelticConnector,
+                      m_CelticNames[random.randint(1,len(m_CelticNames))-1])
+
+                
             
         elif human_race == 'Chinese':
             print('Human', gender,">", human_race)
