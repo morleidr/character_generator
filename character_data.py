@@ -670,6 +670,16 @@ try:
 except ValueError:
     pass
 
+#   List of German Surnames
+GermanSurnames = []
+for y in range(2,inputWorksheet.nrows):
+    GermanSurnames.append(inputWorksheet.cell_value(y,62))
+try:
+    while True:
+        GermanSurnames.remove(val)
+except ValueError:
+    pass
+
 
 ##print(Nouns)
 ##print(m_LizardfolkNames)
