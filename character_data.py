@@ -660,6 +660,15 @@ try:
 except ValueError:
     pass
 
+#   List of French Surnames
+FrenchSurnames = []
+for y in range(2,inputWorksheet.nrows):
+    FrenchSurnames.append(inputWorksheet.cell_value(y,59))
+try:
+    while True:
+        FrenchSurnames.remove(val)
+except ValueError:
+    pass
 
 
 ##print(Nouns)
