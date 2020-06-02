@@ -650,6 +650,17 @@ try:
 except ValueError:
     pass
 
+#   List of Places
+Places = []
+for y in range(2,inputWorksheet.nrows):
+    Places.append(inputWorksheet.cell_value(y,61))
+try:
+    while True:
+        Places.remove(val)
+except ValueError:
+    pass
+
+
 
 ##print(Nouns)
 ##print(m_LizardfolkNames)
