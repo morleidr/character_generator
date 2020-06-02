@@ -87,8 +87,14 @@ if gender == 'Male':
                   m_ChineseNames[random.randint(1,len(m_ChineseNames))-1])
             
         elif human_race == 'Egyptian':
+            
+            # Egyptian Names based on:
+            # Given name + Father name + Grandfather name
+            
             print('Human', gender,">", human_race)
-            print('Egyptian M Name')
+            print(m_EgyptianNames[random.randint(1,len(m_EgyptianNames))-1],
+                  m_EgyptianNames[random.randint(1,len(m_EgyptianNames))-1],
+                  m_EgyptianNames[random.randint(1,len(m_EgyptianNames))-1])
             
         elif human_race == 'English':
             print('Human', gender,">", human_race)
