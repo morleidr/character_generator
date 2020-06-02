@@ -97,12 +97,44 @@ if gender == 'Male':
                   m_EgyptianNames[random.randint(1,len(m_EgyptianNames))-1])
             
         elif human_race == 'English':
-            print('Human', gender,">", human_race)
-            print('English M Name')
             
-        elif human_race == 'French':
             print('Human', gender,">", human_race)
-            print('French M Name')
+            
+            # English M names shall be one of:
+            # 1. x son of x(father) Patronymic
+            # 2. x of x(place)
+            # 3. x the x(noun)
+            # https://en.wikipedia.org/wiki/Patronymic_surname
+            
+            # Determine Connector
+            m_EnglishConnectors = ['son of','of','the']
+            m_EnglishConnector = m_EnglishConnectors[random.randint(1,len(m_EnglishConnectors))-1]
+            print(m_EnglishConnector)
+            
+            # Determine Name based on Connector
+            if m_EnglishConnector == 'the':
+                
+                print(m_EnglishNames[random.randint(1,len(m_EnglishNames))-1],m_EnglishConnector,
+                      Nouns[random.randint(1,len(Nouns))-1])
+                
+            elif m_EnglishConnector == 'of':
+                
+                print(m_EnglishNames[random.randint(1,len(m_EnglishNames))-1],m_EnglishConnector,
+                      Places[random.randint(1,len(Places))-1])
+            
+            else:
+                
+                print(m_EnglishNames[random.randint(1,len(m_EnglishNames))-1],m_EnglishConnector,
+                      m_EnglishNames[random.randint(1,len(m_EnglishNames))-1])
+                       
+        elif human_race == 'French':
+            
+            # French M names shall be based on:
+            # Given name + Surname (based on Top 100 French Surnames)
+            
+            print('Human', gender,">", human_race)
+            print(m_FrenchNames[random.randint(1,len(m_FrenchNames))-1],
+                  FrenchSurnames[random.randint(1,len(FrenchSurnames))-1])
             
         elif human_race == 'German':
             print('Human', gender,">", human_race)
