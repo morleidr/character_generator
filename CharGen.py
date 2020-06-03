@@ -57,7 +57,6 @@ if gender == 'Male':
             # Determine connector
             m_CelticConnectors = ['son of','ap','ab','of','the']            
             m_CelticConnector = m_CelticConnectors[random.randint(1,len(m_CelticConnectors))-1] 
-            print(m_CelticConnector)
             
             # Determine Name from connector
             if m_CelticConnector == 'the':
@@ -147,27 +146,126 @@ if gender == 'Male':
                   GermanSurnames[random.randint(1,len(GermanSurnames))-1])
             
         elif human_race == 'Greek':
+
+            # Greek M names shall be based on:
+            # Given name + patronymic surnamne (taken from Top 100)
+            
             print('Human', gender,">", human_race)
-            print('Greek M Name')
+            print(m_GreekNames[random.randint(1,len(m_GreekNames))-1],
+                  GreekSurnames[random.randint(1,len(GreekSurnames))-1])
+            
         elif human_race == 'Indian':
+
             print('Human', gender,">", human_race)
-            print('Indian M Name')
+
+            # Indian names shall be one of:
+            # 1. Given name + father name
+            # 2. Father initial + given name (example: A, Kiran)
+            
+            # Determine name type:
+            i_NameTypes = ['given','initial']
+            i_NameType = i_NameTypes[random.randint(1,len(i_NameTypes))-1]
+            
+            # Print name based on name type    
+            if i_NameType == 'given':
+                print(m_IndianNames[random.randint(1,len(m_IndianNames))-1],
+                      m_IndianNames[random.randint(1,len(m_IndianNames))-1])
+
+            else:
+                print(m_IndianNames[random.randint(1,len(m_IndianNames))-1][0],
+                      m_IndianNames[random.randint(1,len(m_IndianNames))-1],
+                      sep = ', ')
             
         elif human_race == 'Japanese':
+            
             print('Human', gender,">", human_race)
-            print('Japanese M Name')
+
+            # Japanese M names shall be:
+            # Surname + given name
+            
+            print(JapaneseSurnames[random.randint(1,len(JapaneseSurnames))-1],
+                  m_JapaneseNames[random.randint(1,len(m_JapaneseNames))-1])
             
         elif human_race == 'Mesoamerican':
+
+            # Mesoamerican M names shall be:
+            # Given name
+            
             print('Human', gender,">", human_race)
-            print('Mesoamerican M Name')
+            print(m_MesoamericanNames[random.randint(1,len(m_MesoamericanNames))-1])
             
         elif human_race == 'Niger-Congo':
+
+            # Niger-Congo M names shall be:
+            # Given name + middle initial + father name
+            # (There is nothing suggesting this is how
+            #  naming systems are for Niger-Congo.
+            #  This is made up.)
+            
             print('Human', gender,">", human_race)
-            print('Congolese M Name')
+            print(m_CongoleseNames[random.randint(1,len(m_CongoleseNames))-1],
+                  m_CongoleseNames[random.randint(1,len(m_CongoleseNames))-1][0],
+                  m_CongoleseNames[random.randint(1,len(m_CongoleseNames))-1])
             
         elif human_race == 'Norse':
+            
             print('Human', gender,">", human_race)
-            print('Norse M Name')
+
+            # Norse M names shall be patronymic:
+            # Father name ending -i becomes -ason
+            # Father name ending -a becomes -uson
+            # Father name ending -nn becomes -nsson
+            # Father name ending -ll becomes -lsson
+            # Father name ending -rr becomes -rson
+            # Father name ending -r becomes -sson
+            # Father name ending not listed, add -son
+
+            vname = m_NorseNames[random.randint(1,len(m_NorseNames))-1]
+            vsuffix = vname[len(vname)-1:]
+
+            if vsuffix == 'i':
+                print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                      ' ',
+                      vname[0:-1],'ason',sep='')
+            elif vsuffix == 'a':
+                print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                      ' ',
+                      vname[0:-1],'uson',sep='')
+            elif vsuffix == 'n':
+                vsuffix2 = vname[len(vname)-2:]
+                if vsuffix2 == 'nn':
+                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                          ' ',
+                          vname[0:-1],'sson',sep='')
+                else:
+                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                          ' ',
+                          vname[0:-1],'son',sep='')
+            elif vsuffix == 'l':
+                vsuffix2 = vname[len(vname)-2:]
+                if vsuffix2 == 'll':
+                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                          ' ',
+                          vname[0:-1],'sson',sep='')
+                else:
+                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                          ' ',
+                          vname[0:-1],'son',sep='')
+            elif vsuffix == 'r':
+                vsuffix2 = vname[len(vname)-2:]
+                if vsuffix2 == 'rr':
+                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                          ' ',
+                          vname[0:-1],'son',sep='')
+                else:
+                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                          ' ',
+                          vname[0:-1],'sson',sep='')
+            else:
+                print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                      ' ',
+                      vname,'son',sep='')
+            
             
         elif human_race == 'Polynesian':
             print('Human', gender,">", human_race)
