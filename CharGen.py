@@ -268,15 +268,59 @@ if gender == 'Male':
             
             
         elif human_race == 'Polynesian':
+
+            # Polynesian M Name shall be:
+            # Given name + patronymic name
+            
             print('Human', gender,">", human_race)
-            print('Polynesian M Name')
+            
+            print(m_PolynesianNames[random.randint(1,len(m_PolynesianNames))-1],
+                  m_PolynesianNames[random.randint(1,len(m_PolynesianNames))-1])
             
         elif human_race == 'Roman':
+
+            # Roman M Name shall be:
+            # praenomen + nomen + cognomen
+            
             print('Human', gender,">", human_race)
-            print('Roman M Name')
+
+            praenomen = m_RomanNames[random.randint(1,len(m_RomanNames))-1]
+            nomen = m_RomanNames[random.randint(1,len(m_RomanNames))-1]
+            cognomen = m_RomanNames[random.randint(1,len(m_RomanNames))-1]
+            
+            # 'while loop' to ensure no repetition of name
+            while praenomen == nomen or praenomen == cognomen or nomen == cognomen:
+                praenomen = m_RomanNames[random.randint(1,len(m_RomanNames))-1]
+                nomen = m_RomanNames[random.randint(1,len(m_RomanNames))-1]
+                cognomen = m_RomanNames[random.randint(1,len(m_RomanNames))-1]
+            else:
+                print(praenomen,nomen,cognomen)
             
         elif human_race == 'Slavic':
+
             print('Human', gender,">", human_race)
+
+            # Slavic M names shall be patronymic:
+            # Father name ending is consonant add -ovic
+            # Father name ending is vowel, omit last vowel, add -yevic
+
+            sname = m_SlavicNames[random.randint(1,len(m_SlavicNames))-1]
+            sSuffix = sname[len(sname)-1:]
+
+            """ Need to fix:
+
+            if sSuffix == 'a' or 'e' or 'i' or 'o' or 'u':
+                print(m_SlavicNames[random.randint(1,len(m_SlavicNames))-1],
+                      ' ',
+                      sname[0:-1],'yevic',sep='')
+            else:
+                print(m_SlavicNames[random.randint(1,len(m_SlavicNames))-1],
+                      ' ',
+                      sname,'ovic',sep='')
+
+            """
+            
+            
             print('Slavic M Name')
             
         else:
