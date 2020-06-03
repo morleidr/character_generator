@@ -277,6 +277,17 @@ except ValueError:
     pass
 
 
+#   Family Japanese Names
+JapaneseSurnames = []
+for y in range(2,inputWorksheet.nrows):
+    JapaneseSurnames.append(inputWorksheet.cell_value(y,64))
+try:
+    while True:
+        JapaneseSurnames.remove(val)
+except ValueError:
+    pass
+
+
 #   Female Mesoamerican Names
 f_MesoamericanNames = []
 for y in range(2,inputWorksheet.nrows):
@@ -677,6 +688,16 @@ for y in range(2,inputWorksheet.nrows):
 try:
     while True:
         GermanSurnames.remove(val)
+except ValueError:
+    pass
+
+#   List of Greek Surnames
+GreekSurnames = []
+for y in range(2,inputWorksheet.nrows):
+    GreekSurnames.append(inputWorksheet.cell_value(y,63))
+try:
+    while True:
+        GreekSurnames.remove(val)
 except ValueError:
     pass
 
