@@ -442,6 +442,17 @@ except ValueError:
     pass
 
 
+#   Spanish Surnames
+SpanishSurnames = []
+for y in range(2,inputWorksheet.nrows):
+    SpanishSurnames.append(inputWorksheet.cell_value(y,65))
+try:
+    while True:
+        SpanishSurnames.remove(val)
+except ValueError:
+    pass
+
+
 #   Female Fey Names
 f_FeyNames = []
 for y in range(2,inputWorksheet.nrows):

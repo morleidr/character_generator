@@ -39,7 +39,8 @@ if gender == 'Male':
             # Arabic Names based on:
             # Given name + Father name + Grandfather name
             
-            print(m_ArabicNames[random.randint(1,len(m_ArabicNames))-1],
+            print("Name: ",
+                  m_ArabicNames[random.randint(1,len(m_ArabicNames))-1],
                   m_ArabicNames[random.randint(1,len(m_ArabicNames))-1],
                   m_ArabicNames[random.randint(1,len(m_ArabicNames))-1])
             
@@ -61,17 +62,20 @@ if gender == 'Male':
             # Determine Name from connector
             if m_CelticConnector == 'the':
                 
-                print(m_CelticNames[random.randint(1,len(m_CelticNames))-1],m_CelticConnector,
+                print("Name: ",
+                      m_CelticNames[random.randint(1,len(m_CelticNames))-1],m_CelticConnector,
                       Nouns[random.randint(1,len(Nouns))-1])      
                 
             elif m_CelticConnector == 'of':
                 
-                print(m_CelticNames[random.randint(1,len(m_CelticNames))-1],m_CelticConnector,
+                print("Name: ",
+                      m_CelticNames[random.randint(1,len(m_CelticNames))-1],m_CelticConnector,
                       Places[random.randint(1,len(Places))-1])
                 
             else:
                 
-                print(m_CelticNames[random.randint(1,len(m_CelticNames))-1],m_CelticConnector,
+                print("Name: ",
+                      m_CelticNames[random.randint(1,len(m_CelticNames))-1],m_CelticConnector,
                       m_CelticNames[random.randint(1,len(m_CelticNames))-1])
 
                 
@@ -82,7 +86,8 @@ if gender == 'Male':
             # Chinese M names shall be based on:
             # Family Name + Given Name
             
-            print(fam_ChineseNames[random.randint(1,len(fam_ChineseNames))-1],
+            print("Name: ",
+                  fam_ChineseNames[random.randint(1,len(fam_ChineseNames))-1],
                   m_ChineseNames[random.randint(1,len(m_ChineseNames))-1])
             
         elif human_race == 'Egyptian':
@@ -91,7 +96,8 @@ if gender == 'Male':
             # Given name + Father name + Grandfather name
             
             print('Human', gender,">", human_race)
-            print(m_EgyptianNames[random.randint(1,len(m_EgyptianNames))-1],
+            print("Name: ",
+                  m_EgyptianNames[random.randint(1,len(m_EgyptianNames))-1],
                   m_EgyptianNames[random.randint(1,len(m_EgyptianNames))-1],
                   m_EgyptianNames[random.randint(1,len(m_EgyptianNames))-1])
             
@@ -108,22 +114,24 @@ if gender == 'Male':
             # Determine Connector
             m_EnglishConnectors = ['son of','of','the']
             m_EnglishConnector = m_EnglishConnectors[random.randint(1,len(m_EnglishConnectors))-1]
-            print(m_EnglishConnector)
             
             # Determine Name based on Connector
             if m_EnglishConnector == 'the':
                 
-                print(m_EnglishNames[random.randint(1,len(m_EnglishNames))-1],m_EnglishConnector,
+                print("Name: ",
+                      m_EnglishNames[random.randint(1,len(m_EnglishNames))-1],m_EnglishConnector,
                       Nouns[random.randint(1,len(Nouns))-1])
                 
             elif m_EnglishConnector == 'of':
                 
-                print(m_EnglishNames[random.randint(1,len(m_EnglishNames))-1],m_EnglishConnector,
+                print("Name: ",
+                      m_EnglishNames[random.randint(1,len(m_EnglishNames))-1],m_EnglishConnector,
                       Places[random.randint(1,len(Places))-1])
             
             else:
                 
-                print(m_EnglishNames[random.randint(1,len(m_EnglishNames))-1],m_EnglishConnector,
+                print("Name: ",
+                      m_EnglishNames[random.randint(1,len(m_EnglishNames))-1],m_EnglishConnector,
                       m_EnglishNames[random.randint(1,len(m_EnglishNames))-1])
                        
         elif human_race == 'French':
@@ -132,7 +140,8 @@ if gender == 'Male':
             # Given name + Surname (based on Top 100 French Surnames)
             
             print('Human', gender,">", human_race)
-            print(m_FrenchNames[random.randint(1,len(m_FrenchNames))-1],
+            print("Name: ",
+                  m_FrenchNames[random.randint(1,len(m_FrenchNames))-1],
                   FrenchSurnames[random.randint(1,len(FrenchSurnames))-1])
             
         elif human_race == 'German':
@@ -141,7 +150,8 @@ if gender == 'Male':
             # Given name + middle name + surname (taken from Top 100)
             
             print('Human', gender,">", human_race)
-            print(m_GermanNames[random.randint(1,len(m_GermanNames))-1],
+            print("Name: ",
+                  m_GermanNames[random.randint(1,len(m_GermanNames))-1],
                   m_GermanNames[random.randint(1,len(m_GermanNames))-1],
                   GermanSurnames[random.randint(1,len(GermanSurnames))-1])
             
@@ -151,7 +161,8 @@ if gender == 'Male':
             # Given name + patronymic surnamne (taken from Top 100)
             
             print('Human', gender,">", human_race)
-            print(m_GreekNames[random.randint(1,len(m_GreekNames))-1],
+            print("Name: ",
+                  m_GreekNames[random.randint(1,len(m_GreekNames))-1],
                   GreekSurnames[random.randint(1,len(GreekSurnames))-1])
             
         elif human_race == 'Indian':
@@ -168,11 +179,13 @@ if gender == 'Male':
             
             # Print name based on name type    
             if i_NameType == 'given':
-                print(m_IndianNames[random.randint(1,len(m_IndianNames))-1],
+                print("Name: ",
+                      m_IndianNames[random.randint(1,len(m_IndianNames))-1],
                       m_IndianNames[random.randint(1,len(m_IndianNames))-1])
 
             else:
-                print(m_IndianNames[random.randint(1,len(m_IndianNames))-1][0],
+                print("Name: ",
+                      m_IndianNames[random.randint(1,len(m_IndianNames))-1][0],
                       m_IndianNames[random.randint(1,len(m_IndianNames))-1],
                       sep = ', ')
             
@@ -183,7 +196,8 @@ if gender == 'Male':
             # Japanese M names shall be:
             # Surname + given name
             
-            print(JapaneseSurnames[random.randint(1,len(JapaneseSurnames))-1],
+            print("Name: ",
+                  JapaneseSurnames[random.randint(1,len(JapaneseSurnames))-1],
                   m_JapaneseNames[random.randint(1,len(m_JapaneseNames))-1])
             
         elif human_race == 'Mesoamerican':
@@ -192,7 +206,8 @@ if gender == 'Male':
             # Given name
             
             print('Human', gender,">", human_race)
-            print(m_MesoamericanNames[random.randint(1,len(m_MesoamericanNames))-1])
+            print("Name: ",
+                  m_MesoamericanNames[random.randint(1,len(m_MesoamericanNames))-1])
             
         elif human_race == 'Niger-Congo':
 
@@ -203,7 +218,8 @@ if gender == 'Male':
             #  This is made up.)
             
             print('Human', gender,">", human_race)
-            print(m_CongoleseNames[random.randint(1,len(m_CongoleseNames))-1],
+            print("Name: ",
+                  m_CongoleseNames[random.randint(1,len(m_CongoleseNames))-1],
                   m_CongoleseNames[random.randint(1,len(m_CongoleseNames))-1][0],
                   m_CongoleseNames[random.randint(1,len(m_CongoleseNames))-1])
             
@@ -224,45 +240,54 @@ if gender == 'Male':
             vsuffix = vname[len(vname)-1:]
 
             if vsuffix == 'i':
-                print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                print("Name: ",
+                      m_NorseNames[random.randint(1,len(m_NorseNames))-1],
                       ' ',
                       vname[0:-1],'ason',sep='')
             elif vsuffix == 'a':
-                print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                print("Name: ",
+                      m_NorseNames[random.randint(1,len(m_NorseNames))-1],
                       ' ',
                       vname[0:-1],'uson',sep='')
             elif vsuffix == 'n':
                 vsuffix2 = vname[len(vname)-2:]
                 if vsuffix2 == 'nn':
-                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                    print("Name: ",
+                          m_NorseNames[random.randint(1,len(m_NorseNames))-1],
                           ' ',
                           vname[0:-1],'sson',sep='')
                 else:
-                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                    print("Name: ",
+                          m_NorseNames[random.randint(1,len(m_NorseNames))-1],
                           ' ',
                           vname[0:-1],'son',sep='')
             elif vsuffix == 'l':
                 vsuffix2 = vname[len(vname)-2:]
                 if vsuffix2 == 'll':
-                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                    print("Name: ",
+                          m_NorseNames[random.randint(1,len(m_NorseNames))-1],
                           ' ',
                           vname[0:-1],'sson',sep='')
                 else:
-                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                    print("Name: ",
+                          m_NorseNames[random.randint(1,len(m_NorseNames))-1],
                           ' ',
                           vname[0:-1],'son',sep='')
             elif vsuffix == 'r':
                 vsuffix2 = vname[len(vname)-2:]
                 if vsuffix2 == 'rr':
-                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                    print("Name: ",
+                          m_NorseNames[random.randint(1,len(m_NorseNames))-1],
                           ' ',
                           vname[0:-1],'son',sep='')
                 else:
-                    print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                    print("Name: ",
+                          m_NorseNames[random.randint(1,len(m_NorseNames))-1],
                           ' ',
                           vname[0:-1],'sson',sep='')
             else:
-                print(m_NorseNames[random.randint(1,len(m_NorseNames))-1],
+                print("Name: ",
+                      m_NorseNames[random.randint(1,len(m_NorseNames))-1],
                       ' ',
                       vname,'son',sep='')
             
@@ -274,7 +299,8 @@ if gender == 'Male':
             
             print('Human', gender,">", human_race)
             
-            print(m_PolynesianNames[random.randint(1,len(m_PolynesianNames))-1],
+            print("Name: ",
+                  m_PolynesianNames[random.randint(1,len(m_PolynesianNames))-1],
                   m_PolynesianNames[random.randint(1,len(m_PolynesianNames))-1])
             
         elif human_race == 'Roman':
@@ -294,7 +320,8 @@ if gender == 'Male':
                 nomen = m_RomanNames[random.randint(1,len(m_RomanNames))-1]
                 cognomen = m_RomanNames[random.randint(1,len(m_RomanNames))-1]
             else:
-                print(praenomen,nomen,cognomen)
+                print("Name: ",
+                      praenomen,nomen,cognomen)
             
         elif human_race == 'Slavic':
 
@@ -307,30 +334,47 @@ if gender == 'Male':
             sname = m_SlavicNames[random.randint(1,len(m_SlavicNames))-1]
             sSuffix = sname[len(sname)-1:]
 
-            """ Need to fix:
 
-            if sSuffix == 'a' or 'e' or 'i' or 'o' or 'u':
-                print(m_SlavicNames[random.randint(1,len(m_SlavicNames))-1],
+            if sSuffix == 'a' or sSuffix == 'e' or sSuffix == 'i' or sSuffix == 'o' or sSuffix == 'u':
+                print("Name: ",
+                      m_SlavicNames[random.randint(1,len(m_SlavicNames))-1],
                       ' ',
                       sname[0:-1],'yevic',sep='')
             else:
-                print(m_SlavicNames[random.randint(1,len(m_SlavicNames))-1],
+                print("Name: ",
+                      m_SlavicNames[random.randint(1,len(m_SlavicNames))-1],
                       ' ',
                       sname,'ovic',sep='')
 
-            """
-            
-            
-            print('Slavic M Name')
             
         else:
+            
+            # Spanish Names shall be:
+            # Given name + Surname
+            
             print('Human', gender,">", human_race)
-            print('Spanish M Name')
+            
+            print("Name: ",
+                  m_SpanishNames[random.randint(1,len(m_SpanishNames))-1],
+                  SpanishSurnames[random.randint(1,len(SpanishSurnames))-1],sep='')
         
 
         
     elif race == 'Fey':
+        
+        # Fey M names shall be:
+        # Given name + Family name + matronymic name
+        # Matronymic name = dír/mír/kír/tír + mother's name
+        # example: Adran Firahel dírEnna
+        
+        FeyMatronymic = ['dír','mír','kír','tír']
+        
         print('Fey', gender)
+        print("Name: ",
+              m_FeyNames[random.randint(1,len(m_FeyNames))-1],' ',
+              fam_FeyNames[random.randint(1,len(fam_FeyNames))-1],' ',
+              FeyMatronymic[random.randint(1,len(FeyMatronymic))-1],
+              f_FeyNames[random.randint(1,len(f_FeyNames))-2],sep='')
         
     elif race == 'Dwarf':
         print('Dwarf', gender)
